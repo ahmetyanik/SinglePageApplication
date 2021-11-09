@@ -1,3 +1,4 @@
 {
-    "livePreview.defaultPreviewPath": "/c2---selecting-stuff-ahmetyanik/index.html"
+    "livePreview.defaultPreviewPath": "/children/index.html",
+    "liveServer.settings.port": 5502
 }
