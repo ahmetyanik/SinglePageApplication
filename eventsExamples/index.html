@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        main {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        main>div {
+            width: 250px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            margin: 10px;
+            flex-direction: column;
+        }
+
+        #draggable {
+            width: 200px;
+            height: 20px;
+            text-align: center;
+            background: white;
+        }
+
+        .dropzone {
+            width: 200px;
+            height: 20px;
+            background: white;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+        <div id="click">Click me <span>Count:<span>0</span></span></div>
+        <div id="enter">Mouse Enter<span>Count:<span>0</span></span></div>
+        <div id="out">Mouse Out<span>Count:<span>0</span></span></div>
+        <div id="move">Mouse Move<span>Count:<span>0</span></span></div>
+        <div id="press">Press any key
+            <input type="text">
+            <span>Count:<span>0</span></span></div>
+        <div id="scroll" style="overflow: scroll;">Scroll here: Lorem ipsum, dolor sit amet consectetur adipisicing
+            elit. Deleniti accusantium provident aliquam nisi esse perspiciatis vitae! Vitae, quaerat cupiditate, omnis
+            ab eaque magnam id doloribus culpa illo, aut pariatur unde earum illum eius! Omnis adipisci eos ea aperiam
+            non numquam quis quas. Quos ducimus nulla repellat molestiae harum vero id. Lorem ipsum, dolor sit amet
+            consectetur adipisicing elit. Deleniti accusantium provident aliquam nisi esse perspiciatis vitae! Vitae,
+            quaerat cupiditate, omnis ab eaque magnam id doloribus culpa illo, aut pariatur unde earum illum eius! Omnis
+            adipisci eos ea aperiam non numquam quis quas. Quos ducimus nulla repellat molestiae harum vero
+            id.<span>Count:<span>0</span></span></div>
+
+        <div>
+            <div class="dropzone">
+                <div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)">
+                    Drag this text.
+                </div>
+            </div>
+            <div class="dropzone"></div>
+        </div>
+
+
+
+        <div id="input">Leave me(blur event)
+            <input type="text" name="" id="">
+
+            <div></div>
+        </div>
+    </main>
+
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
