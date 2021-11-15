@@ -1,0 +1,19 @@
+[
+    {
+        "id" : 1,
+        "isim":"ahmet"
+
+    }
+    ,
+    {
+        "id" : 2,
+        "isim":"siddik"
+
+    }
+    ,
+    {
+        "id" : 3,
+        "isim":"murat"
+
+    }
+]
