@@ -8,9 +8,9 @@ divs.forEach(div=>{
 
         e.stopPropagation();
 
-        console.log(e.target);
+        console.log(div);
 
-        e.target.style.backgroundColor = "green";
+        div.style.backgroundColor = "green";
     })
 
 })
