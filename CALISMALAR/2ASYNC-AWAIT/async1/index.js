@@ -18,26 +18,33 @@ console.log(getData());
 
  */
 
+// DISARDAKI DEGISKENE PROMISE'TEN VERI GÖNDERMEK mmc 170
 
-function getData(){
+let obje1;
+
+ function getData(){
+
+   return new Promise(resolve=>{
+
+      fetch("https://jsonplaceholder.typicode.com/todos").then(data=>data.json()).then(data=>data[0]).then(data=>resolve(data))
+
+   }).then(data=>{
+      obje1=data
+      console.log(obje1)
+     })
+
     
-   
-
-   fetch("https://jsonplaceholder.typicode.com/todos").then(data=>data.json()).then(data=>data.forEach(user=>{
-
-   user.id = user.id +2;
-
-   user.title = "Yasa Ahmet Pasa"
-
-    console.log(user);
-
-   }))
-    
-   
  }
  
  getData()
 
+ setTimeout(() => {
+
+   console.log("set:",obje1);
+    
+ }, 3000);
+
+ 
 
 /* 
  async function datas(){
