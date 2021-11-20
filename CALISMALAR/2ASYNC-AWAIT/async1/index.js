@@ -1,4 +1,4 @@
-/* 
+
 
 async function getData(){
 
@@ -16,10 +16,10 @@ async function getData(){
 
 console.log(getData());
 
- */
+ 
 
 // DISARDAKI DEGISKENE PROMISE'TEN VERI GÖNDERMEK mmc 170
-
+/* 
 let obje1;
 
  function getData(){
@@ -44,7 +44,7 @@ let obje1;
     
  }, 3000);
 
- 
+  */
 
 /* 
  async function datas(){
@@ -67,3 +67,7 @@ let obje1;
  datas()
 
   */
+
+
+
+
