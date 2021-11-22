@@ -1,0 +1,177 @@
+[
+    {
+        "name" : "lamb-jr",
+        "isOpen":false,
+        "matched": "lamb",
+        "image": "url('https://pbs.twimg.com/profile_images/874791377162440704/aKdmJUMX_400x400.jpg')"
+
+        
+    },
+    {
+        "name" : "rabbit-jr",
+        "isOpen":false,
+        "matched": "rabbit",
+        "image": "url('https://i.pinimg.com/originals/f1/06/d7/f106d70f41c3d9e7db1f404adc93df38.jpg')"
+        
+    },
+    {
+        "name" : "eyelash-jr",
+        "isOpen":false,
+        "matched": "eyelash",
+        "image": "url('https://img.paratic.com/dosya/2017/04/kirpi-yavrusu.jpg')"
+
+        
+    },
+    {
+        "name" : "chicken-jr",
+        "isOpen":false,
+        "matched": "chicken",
+        "image": "url('https://img.piri.net/mnresize/720/2000/resim/galeri/kapak7329a8d8.jpg')"
+        
+    },    {
+        "name" : "cat-jr",
+        "isOpen":false,
+        "matched": "cat",
+        "image": "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLnXqwwQ4a_YLgz8zfRnctBR6mW4z5W5aFcpM5qFcuIAhAOOBry7JtC7xQABwP-pzU7_w&usqp=CAU')"
+
+        
+    },
+    {
+        "name" : "panda-jr",
+        "isOpen":false,
+        "matched": "panda",
+        "image": "url('https://i.pinimg.com/236x/d2/9d/b0/d29db0b4fe7c7aee61cb2a79315078e9.jpg')"
+        
+    },
+    {
+        "name" : "donkey-jr",
+        "isOpen":false,
+        "matched": "donkey",
+        "image": "url('https://cdn.bursahayat.com.tr/galeri/2016/09/20/479-birbirinden-sevimli-yavru-hayvanlar-57e1916cad0a8.jpg')"
+
+        
+    },
+    {
+        "name" : "dog-jr",
+        "isOpen":false,
+        "matched": "dog",
+        "image": "url('https://live.staticflickr.com/3888/14396104984_819a52d7d4_c.jpg')"
+        
+    },    {
+        "name" : "fox-jr",
+        "isOpen":false,
+        "matched": "fox",
+        "image": "url('https://i.pinimg.com/originals/97/88/c6/9788c600bc518b16d6becfe036e82a6b.jpg')"
+
+        
+    },
+    {
+        "name" : "lion-jr",
+        "isOpen":false,
+        "matched": "lion",
+        "image": "url('https://img.paratic.com/dosya/2017/04/aslan-yavrusu.jpg')"
+        
+    },
+    {
+        "name" : "deer-jr",
+        "isOpen":false,
+        "matched": "deer",
+        "image": "url('https://img.pixers.pics/pho_wat(s3:700/FO/52/86/60/94/700_FO52866094_bcbfbdbb87d2d95f7f855afd149b88fb.jpg,700,469,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,419,jpg)/duvar-resimleri-karaca-geyik-yavrusu-capreolus-capreolus.jpg.jpg')"
+
+        
+    },
+    {
+        "name" : "duck-jr",
+        "isOpen":false,
+        "matched": "duck",
+        "image": "url('https://cf.kizlarsoruyor.com/q567518/56a76959-f380-40ca-94d6-928643a3a095-m.jpg')"
+        
+    },    {
+        "name" : "lamb",
+        "isOpen":false,
+        "matched": "lamb-jr",
+        "image": "url('https://www.modanium.com/wp-content/uploads/2015/04/kahve-falinda-koyun-gormek.jpg')"
+
+        
+    },
+    {
+        "name" : "rabbit",
+        "isOpen":false,
+        "matched": "rabbit-jr",
+        "image": "url('https://img-s1.onedio.com/id-61709f270988a9c31e3776be/rev-0/w-620/f-jpg/s-1fad91bd9d2334c1eba864db5d9f4fe4edec1732.jpg')"
+        
+    },
+    {
+        "name" : "eyelash",
+        "isOpen":false,
+        "matched": "eyelash-jr",
+        "image": "url('https://i2.milimaj.com/i/milliyet/75/0x0/5efc9e4655427e133003db1f.jpg')"
+
+        
+    },
+    {
+        "name" : "chicken",
+        "isOpen":false,
+        "matched": "chicken-jr",
+        "image": "url('https://www.tarimdanhaber.com/images/resize/100/656x400/haberler/2019/05/tavuk_irklari_h3550_10149.jpg')"
+        
+    },    {
+        "name" : "cat",
+        "isOpen":false,
+        "matched": "cat-jr",
+        "image": "url('https://cdn.kadin.com/images/posts/9/1/8/620x400/ruyada-kedi-gormek-ne-anlama-gelir-1517924439.png')"
+
+        
+    },
+    {
+        "name" : "duck",
+        "isOpen":false,
+        "matched": "duck-jr",
+        "image": "url('https://myanimals.com/tr/wp-content/uploads/2019/01/ordek-bakimi.jpg')"
+        
+    },
+    {
+        "name" : "panda",
+        "isOpen":false,
+        "matched": "panda-jr",
+        "image": "url('https://www.tagesspiegel.de/images/grosser-panda-meng-meng_zoo-berlin/24195486/2-format43.jpg')"
+
+        
+    },
+    {
+        "name" : "donkey",
+        "isOpen":false,
+        "matched": "donkey-jr",
+        "image": "url('https://3.bp.blogspot.com/-vbAseXNR7N0/VNGHpVmYYaI/AAAAAAAAY1w/p5Y1eA8b6mI/s1600/esek.jpg')"
+        
+    },    {
+        "name" : "dog",
+        "isOpen":false,
+        "matched": "dog-jr",
+        "image": "url('https://i20.haber7.net/resize/1300x731//haber/haber7/photos/2017/44/ruyada_kopek_gormek_ne_anlama_gelir_ruyadaki_kopegin_tabiri_1509544402_4083.jpg')"
+
+        
+    },
+    {
+        "name" : "fox",
+        "isOpen":false,
+        "matched": "fox-jr",
+        "image": "url('https://www.neoldu.com/d/other/ruyada-tilki-gormek-001.webp')"
+        
+    },
+    {
+        "name" : "lion",
+        "isOpen":false,
+        "matched": "lion-jr",
+        "image": "url('https://img-s1.onedio.com/id-57ab39e97027962828cb48fe/rev-0/w-620/f-jpg/s-75ffd66256d92158cbc6f0fde25b7258c1647cce.jpg')"
+
+        
+    },
+    {
+        "name" : "deer",
+        "isOpen":false,
+        "matched": "deer-jr",
+        "image": "url('https://iasbh.tmgrup.com.tr/52a3b6/650/344/0/65/724/445?u=https://isbh.tmgrup.com.tr/sbh/2021/08/31/ruyada-geyik-gormek-ne-anlama-gelir-ruyada-geyik-yavrusu-gormek-ne-demek-1630388632143.jpg')"
+        
+    }
+]
