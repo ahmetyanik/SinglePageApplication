@@ -39,6 +39,7 @@ async function hayvanlariMaineGonder() {
 
 button.addEventListener("click", () => {
   hamleSayisi = 0;
+  hamle.innerText = `${hamleSayisi}`;
   hayvanlariMaineGonder();
 
   console.log(main);

@@ -4,8 +4,11 @@ function kisiEkle() {
   const input = prompt("Kisi giriniz:");
 
   const istek = new Promise((resolve, reject) => {
+
+
     if (!input || input.length === 0) {
       reject("Herhangi bir kisi eklemediniz!");
+    
     } else if (input === "q") {
       console.log("********Kisiler**********");
 
@@ -14,6 +17,8 @@ function kisiEkle() {
       });
 
       reject(sonuc());
+   
+   
     } else if (input.length > 0) {
       array.push(input);
 
@@ -34,6 +39,7 @@ function sonuc() {
 }
 
 function oyna() {
+
   function tekrar() {
     kisiEkle()
       .then((data) => console.log(data))
