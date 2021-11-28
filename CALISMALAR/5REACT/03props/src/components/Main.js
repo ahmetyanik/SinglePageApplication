@@ -10,6 +10,8 @@ function Main() {
 
     const jsonlar = await veriler.json();
 
+    console.log("Notlari al calisti!");
+
     setNotlar(jsonlar);
   }
 
@@ -21,9 +23,11 @@ function Main() {
     const veri = await fetch(`http://localhost:3000/Not${value}.json`);
     const jsonOlarak = await veri.json();
 
+    console.log("tek notu al calisiyor");
    
     jsonOlarak.map(e=>{
-        setTekNot(e);
+
+       return setTekNot(e);
     })
 
 
@@ -31,11 +35,13 @@ function Main() {
 
   useEffect(() => {
     tekNotuAl();
-  }, [tekNot]);
+  }, []);
 
   useEffect(() => {
     notlariAl();
-  });
+  },[]);
+
+
 
   return (
     <div style={{ minHeight: "90vh" }}>
@@ -63,7 +69,7 @@ function Main() {
               resim={tekNot.resim}
               baslik={tekNot.baslik}
               icerik={tekNot.icerik}
-              link={tekNot.link}
+              link={tekNot.links}
            />
        
 
