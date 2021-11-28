@@ -1,0 +1,44 @@
+[
+    {
+        "resim" : "https://icdn.ensonhaber.com/resimler/galeri/16_3875.jpg",
+        
+        "baslik" : "Sonbahar",
+
+        "icerik" : "Sonbahar resmi oldukca güzel",
+
+
+        "link" : "https://tr.wikipedia.org/wiki/Sonbahar"
+    },
+    {
+        "resim" : "https://lh3.googleusercontent.com/proxy/9VEt8BDxwv0iq3aHIUWfUXd60xDCFdVy-I15yllK55QbLK07SuglIjlv4ry6U0ffwkBFCVneppqxE8mjEpj7fuXPeDD0fXkdfbhCLs8OmR51CCXEJpKBHgQnhJcvvVRIQ0X6jre1pBbQxWfIKjbkwNXEbQ",
+        
+        "baslik" : "Kis",
+
+        "icerik" : "Kis resmi oldukca güzel",
+
+
+        "link" : "https://lh3.googleusercontent.com/proxy/9VEt8BDxwv0iq3aHIUWfUXd60xDCFdVy-I15yllK55QbLK07SuglIjlv4ry6U0ffwkBFCVneppqxE8mjEpj7fuXPeDD0fXkdfbhCLs8OmR51CCXEJpKBHgQnhJcvvVRIQ0X6jre1pBbQxWfIKjbkwNXEbQ"
+    },
+    {
+        "resim" : "http://bilgi.gonlumungulu.com/wp-content/uploads/2016/03/gg_bahar_Resmi.jpg",
+        
+        "baslik" : "Ilkbahar",
+
+        "icerik" : "Ilkbahar resmi oldukca güzel",
+
+
+        "link" : "http://bilgi.gonlumungulu.com/wp-content/uploads/2016/03/gg_bahar_Resmi.jpg"
+    },
+    {
+        "resim" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTteUzS5HwSgymF1R4jtbK_Amu3MMFPxOLvLA&usqp=CAU",
+        
+        "baslik" : "Yaz",
+
+        "icerik" : "Yaz resmi oldukca güzel",
+
+
+        "link" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTteUzS5HwSgymF1R4jtbK_Amu3MMFPxOLvLA&usqp=CAU"
+    
+    }
+
+]
