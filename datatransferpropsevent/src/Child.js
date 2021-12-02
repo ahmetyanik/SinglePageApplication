@@ -5,9 +5,9 @@ function Child(props) {
     let child = "Ben child'dan geliyorum.";
 
 
-    function sendMother(){
+    const sendMother=()=>{
 
-        props.onButton(child)
+        props.onButton("hello")
 
 
     }

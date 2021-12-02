@@ -2,11 +2,11 @@ import { useState } from 'react';
 import './App.css';
 import Child from './Child';
 
-function App() {
+function Mother() {
 
-  const [myName,setMyName] = useState();
+  const [myName,setMyName] = useState("");
 
-  function ismiDegistir(param){
+  const ismiDegistir = (param)=>{
 
     setMyName(param);
   }
@@ -17,6 +17,7 @@ function App() {
     <div className="App" style={{minHeight:"50vh",backgroundColor:"red",padding:"10px"}}>
 
     Hier ist Mother
+    {myName}
 
     <Child onButton = {ismiDegistir} />
       
@@ -24,4 +25,4 @@ function App() {
   );
 }
 
-export default App;
+export default Mother;
