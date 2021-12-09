@@ -1,0 +1,57 @@
+[
+    {
+        "name" : "Kuh",
+        "content":"Das Hausrind oder schlicht Rind (Bos taurus,[1] lateinisch früher schlicht Bos) ist die domestizierte Form des eurasischen Auerochsen.",
+        "image" : "https://i.ytimg.com/vi/lOgx8nb42zQ/maxresdefault.jpg",
+        "link" :"https://de.wikipedia.org/wiki/Kuh"
+    },
+    {
+        "name" : "Elephant",
+        "content":"Der Afrikanische Elefant (Loxodonta africana), auch Afrikanischer  auch Afrikanischer   auch Afrikanischer ...",
+        "image" : "https://static.dw.com/image/45665028_303.jpg",
+        "link" :"https://de.wikipedia.org/wiki/Afrikanischer_Elefant"
+    },
+    {
+        "name" : "Monkey",
+        "content":"Monkey is a common name that may refer to most mammals of the infraorder Simiiformes, also known as the simians. ",
+        "image" : "https://i.ytimg.com/vi/opyPkipNNhE/maxresdefault.jpg",
+        "link" :"https://en.wikipedia.org/wiki/Monkey"
+    },
+    {
+        "name" : "Chicken",
+        "content":"The chicken (Gallus gallus domesticus) is a domesticated subspecies of the red junglefowl originally from Southeastern Asia.",
+        "image" : "https://th.bing.com/th/id/OIP.IHt054PISuUu60s6Lax18wHaEj?pid=ImgDet&rs=1",
+        "link" :"https://en.wikipedia.org/wiki/Chicken"
+    },
+    {
+        "name" : "Cockerel",
+        "content":"Das Haushuhn, kurz auch Huhn genannt, ist eine Zuchtform des Bankivahuhns, eines Wildhuhns aus Südostasien,",
+        "image" : "https://www.macmillandictionary.com/external/slideshow/full/Cockerel_full.jpg",
+        "link" :"https://de.wikipedia.org/wiki/Haushuhn"
+    },
+    {
+        "name" : "Bee",
+        "content":"Bees are insects with wings closely related to wasps and ants, known for their role in pollination and, in the case of the species...",
+        "image" : "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2013/02/honey_bee/12518879-1-eng-GB/Honey_bee_pillars.jpg",
+        "link" :"https://en.wikipedia.org/wiki/Bee"
+    },
+    {
+        "name" : "Cat",
+        "content":"Der Afrikanische Elefant (Loxodonta africana), auch Afrikanischer  auch Afrikanischer   auch Afrikanischer ...",
+        "image" : "https://th.bing.com/th/id/R.4c9bc358b37aaa190164a2ace8d753eb?rik=SJCI9RTQV5VK8A&pid=ImgRaw&r=0",
+        "link" :"https://de.wikipedia.org/wiki/Afrikanischer_Elefant"
+    },
+    {
+        "name" : "Deer",
+        "content":"Monkey is a common name that may refer to most mammals of the infraorder Simiiformes, also known as the simians. ",
+        "image" : "https://th.bing.com/th/id/OIP.Lz7xZaPllo1l8YmQIur57gHaE7?pid=ImgDet&rs=1",
+        "link" :"https://en.wikipedia.org/wiki/Monkey"
+    },
+    {
+        "name" : "Snake",
+        "content" :"Snake is gut",
+        "image" :"https://th.bing.com/th/id/OIP.F0MxhB_tpXPSqdk7DX3HKAHaEo?w=314&h=196&c=7&r=0&o=5&pid=1.7",
+        "link" :"https://www.bing.com/images/search?view=detailV2&ccid=F0MxhB%2ft&id=C7769C6189A0E5CDA6BB02532BCE4690CB49D899&thid=OIP.F0MxhB_tpXPSqdk7DX3HKAHaEo&mediaurl=https%3a%2f%2fi2.wp.com%2fthegeyik.com%2fwp-content%2fuploads%2f2016%2f03%2fkelebek.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.174331841feda573d2a9d93b0d7dc728%3frik%3dmdhJy5BGzitTAg%26pid%3dImgRaw%26r%3d0&exph=800&expw=1280&q=kelebek&simid=608011723970904459&FORM=IRPRST&ck=1C77A1793F912106D19597CA0D2624FE&selectedIndex=0&ajaxhist=0&ajaxserp=0"
+
+    }
+]
