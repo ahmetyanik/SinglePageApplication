@@ -18,7 +18,7 @@ export class Class2 extends Component {
       <div style={{ width: "30vw" }} className="mt-3">
         <div className="card">
           <div onClick={this.handleClick} className="card-header">
-            <h4>{this.props.state.name}</h4>
+            <h4>{this.props.state.name} - Click Here</h4>
           </div>
 
           {this.state.isVisible ? (
