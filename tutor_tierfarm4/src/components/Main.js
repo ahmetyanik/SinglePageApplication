@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 import AnimalCard from "./AnimalCard";
 import Controls from "./Controls";
 
-const reducer = (state, action) => {
+function reducer (state, action){
   if (action.type === "add") {
     return [...state, action.payload.newAnimal];
   }

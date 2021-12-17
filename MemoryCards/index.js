@@ -80,6 +80,10 @@ main.addEventListener("click", (e) => {
 
   hamle.innerText = `${hamleSayisi}`;
   hamle.style.fontSize = "5rem";
+
+
+  console.log(num);
+
 });
 
 async function kontrol() {
@@ -93,8 +97,6 @@ async function kontrol() {
     console.log("iki eleman acildi");
     console.log(ikiElement);
 
-    console.log(ikiElement[0].getAttribute("name"));
-    console.log(ikiElement[1].getAttribute("matched"));
 
     if (
       ikiElement[0].getAttribute("name") ===
@@ -115,4 +117,7 @@ async function kontrol() {
       });
     }
   }
+
+
+ 
 }

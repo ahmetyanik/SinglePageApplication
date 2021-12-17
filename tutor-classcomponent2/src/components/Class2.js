@@ -6,6 +6,7 @@ export class Class2 extends Component {
   };
 
   handleClick = () => {
+
     this.setState({
       isVisible: !this.state.isVisible,
     });
@@ -17,8 +18,10 @@ export class Class2 extends Component {
     return (
       <div style={{ width: "30vw" }} className="mt-3">
         <div className="card">
-          <div onClick={this.handleClick} className="card-header">
-            <h4>{this.props.state.name} - Click Here</h4>
+          <div  onClick={this.handleClick} className="card-header">
+            <h4 className="d-flex justify-content-between">
+              {this.props.state.name} - Click Here
+            </h4>
           </div>
 
           {this.state.isVisible ? (
@@ -27,6 +30,7 @@ export class Class2 extends Component {
               <p className="card-text">{this.props.state.age}</p>
             </div>
           ) : null}
+
         </div>
       </div>
     );

@@ -33,7 +33,6 @@ function Main() {
       
     }
     
-    console.log(avatar);
   useEffect(() => {
     getDatas();
   },[]);

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 function Controls({dispatch}) {
 
@@ -6,8 +6,7 @@ function Controls({dispatch}) {
    function sendData(){
 
     const front = document.querySelector("#front");
-    const back = document.querySelector("#back");
-    
+    const back = document.querySelector("#back");    
     
     const data = {
         front : front.value,

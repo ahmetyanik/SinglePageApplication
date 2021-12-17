@@ -49,6 +49,8 @@ function showTodos(){
 
 }
 
+
+
 function removeTodo(e){
 
     todoslar.forEach((todo,index)=>{
@@ -59,11 +61,11 @@ function removeTodo(e){
             e.target.remove();
         }
     })
-    localStorage.todos = JSON.stringify(todoslar);
-    
-    
+    localStorage.todos = JSON.stringify(todoslar);   
 
 }
+
+
 
 button.addEventListener("click",addTodoToLocal);
 
