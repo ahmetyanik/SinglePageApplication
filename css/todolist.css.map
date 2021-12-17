@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,gBAAgB,EAAE,+BAA+B;EACjD,iBAAiB,EAAE,SAAS;EAC5B,eAAe,EAAE,KAAK;CACzB",
+    "sources": [
+        "../todo-react/src/style/todolist.scss"
+    ],
+    "names": [],
+    "file": "todolist.css"
+}

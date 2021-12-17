@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,EAAE,CAAA;EACE,MAAM,EAAG,GAAG;CACf",
+    "sources": [
+        "../todo-react/src/style/erledigt.scss"
+    ],
+    "names": [],
+    "file": "erledigt.css"
+}
