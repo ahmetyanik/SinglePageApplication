@@ -4,9 +4,11 @@ class JokeApi{
         this.axiosNesne = axios.create({
             baseURL : this.baseURL,
         })
+        
     }
 
     async randomSakaGetir(){
+
 
         try{
 
