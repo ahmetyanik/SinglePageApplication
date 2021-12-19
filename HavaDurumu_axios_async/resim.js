@@ -1,30 +1,25 @@
 class Resim{
+ 
 
-    constructor(){
+    async rastgeleResimGetir(sehir){
+
         this.baseURL = "https://api.unsplash.com",
-        this.clientID = "Client-ID --wPOZdbWxyy-CnUscNeJRbTHJwvSP7xRqdl1KH2b2Y";
+        this.clientID = "Client-ID swlWll04UM6pF7GHUUM9kIn4lSYZC4yD3pkCZYuXsRQY";
         this.axiosNesnesi = axios.create({
             baseURL : this.baseURL,
             headers : {
                 Authorization : this.clientID
             },
             params:{
-                query : "cat",
+                query : sehir,
                 count : 1
 
             }
 
         })
-    }
 
-
-    async rastgeleResimGetir(sehir){
-
-        this.axiosNesnesi.params.query = sehir;
 
         const rastgeleResim = await this.axiosNesnesi.get("/photos/random");
-
-        console.log(rastgeleResim.data[0].urls.regular);
 
         return rastgeleResim.data[0].urls.regular;
     }
