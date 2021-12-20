@@ -1,13 +1,36 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
+let inputDegeri = "";
+
+function getData(e) {
+  e.preventDefault();
+
+  const input = document.querySelector("input");
+
+  const value = input.value;
+
+  inputDegeri = value;
+
+
+  console.log(inputDegeri);
+
+  return value;
+}
+
+
 
 function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            KITAP SITESI
-          </a>
+          <Link to={"/"}>
+            {" "}
+            <p className="navbar-brand" href="#">
+              KITAP SITESI
+            </p>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -67,16 +90,20 @@ function Navbar() {
                 <a className="nav-link disabled">Disabled</a>
               </li>
             </ul>
-            <form className="d-flex">
+            <form onSubmit={getData} id="aranan" className="d-flex">
               <input
                 className="form-control me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-success" type="submit">
+            <Link to={`/arama/:${inputDegeri}}`}> <button
+                id="arama"
+                className="btn btn-outline-success"
+                type="submit"
+              >
                 Search
-              </button>
+              </button></Link> 
             </form>
           </div>
         </div>
