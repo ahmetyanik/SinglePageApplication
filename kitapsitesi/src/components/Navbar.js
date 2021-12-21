@@ -1,32 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-let inputDegeri = "";
-
-function getData(e) {
-  e.preventDefault();
-
-  const input = document.querySelector("input");
-
-  const value = input.value;
-
-  inputDegeri = value;
-
-
-  console.log(inputDegeri);
-
-  return value;
-}
-
-
-
 function Navbar() {
+  const [kitaplar, setKitaplar] = useState([
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+  ]);
+  const [kategoriler, setKategoriler] = useState([]);
+
+  async function kitaplariAl() {
+    const kitaplarJSON = await fetch("/kitaplar.json");
+    const kitaplarArray = await kitaplarJSON.json();
+
+    setKitaplar(kitaplarArray);
+
+    const newArray = [];
+
+    kitaplarArray.forEach((kitap) => {
+      if (!newArray.includes(kitap.kategori)) {
+        newArray.push(kitap.kategori);
+      }
+    });
+
+    setKategoriler(newArray);
+  }
+
+  useEffect(() => kitaplariAl(), []);
+
+  console.log(kategoriler);
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
           <Link to={"/"}>
-            {" "}
             <p className="navbar-brand" href="#">
               KITAP SITESI
             </p>
@@ -66,44 +80,37 @@ function Navbar() {
                   Dropdown
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Something else here
-                    </a>
-                  </li>
+                  {kategoriler.map((tür, index) => {
+                    return (
+                     <Link key={index} to={`/kategori/${tür}`} >
+                     <li >
+                        <div className="dropdown-item" href="#">
+                          {tür}
+                        </div>
+                      </li></Link> 
+                    );
+                  })}
                 </ul>
               </li>
               <li className="nav-item">
                 <a className="nav-link disabled">Disabled</a>
               </li>
             </ul>
-            <form onSubmit={getData} id="aranan" className="d-flex">
+            <form action="/arama" id="aranan" className="d-flex">
               <input
+                name="kitap"
                 className="form-control me-2"
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
               />
-            <Link to={`/arama/:${inputDegeri}}`}> <button
+              <button
                 id="arama"
                 className="btn btn-outline-success"
                 type="submit"
               >
                 Search
-              </button></Link> 
+              </button>
             </form>
           </div>
         </div>

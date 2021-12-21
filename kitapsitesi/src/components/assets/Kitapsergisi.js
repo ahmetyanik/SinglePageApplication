@@ -1,7 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Kitapsergisi({ kitaplar }) {
+function Kitapsergisi({ kitaplar, reducerState,dispatch }) {
+
+  
+
+
+
+
   return (
     <div className="d-flex justify-content-center ">
       <div
@@ -24,10 +30,18 @@ function Kitapsergisi({ kitaplar }) {
               <div id="card-body" className="card-body">
                 <h5 className="card-title">{kitap.kitapismi}</h5>
                 <p className="card-text">{kitap.yayinevi}</p>
-                <Link to={`${kitap.kitapismi}`}>
+                <div className="d-flex justify-content-between align-items-center">
+                <Link to={`/book/${kitap.kitapismi}`}>
                   
                   <button className="btn btn-primary">{kitap.kitapismi}</button>
                 </Link>
+
+                <i onClick={()=>{
+                  
+                  dispatch({type:"add", payload:{kitap:kitap}})
+                  
+                  }}  className="fas fa-cart-plus"> {kitap.fiyat}€</i>
+                </div>
               </div>
             </div>
           );
