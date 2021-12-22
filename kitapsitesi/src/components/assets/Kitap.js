@@ -46,13 +46,13 @@ function Kitap({ reducerState, dispatch }) {
             ) : null;
           })}
 
-          <div className="col-7">
+          <div className="col-7 border">
 
           {kitaplar.map((kitap, index) => {
             return kitap.kitapismi === params.book ? (
               <div key={index} className="col-5" style={{width:"90%"}} >
                 
-                <div className="border">
+                <div>
 
                 <h3>{kitap.kitapismi}</h3>
                 <p>Yazar: {kitap.yazar}</p>
@@ -61,9 +61,14 @@ function Kitap({ reducerState, dispatch }) {
 
                 </div>
 
+                <button onClick={() => {
+                      dispatch({ type: "add", payload: { kitap: kitap } });
+                    }} className="btn btn-success">Sepete Ekle</button>
+
               </div>
             ) : null;
           })}
+
 
 
           </div>
@@ -71,7 +76,7 @@ function Kitap({ reducerState, dispatch }) {
         
       </div>
       <div className="col-3 d-flex justify-content-end">
-      <Cart reducerState={reducerState} dispatch={dispatch} />
+      <Cart reducerState={reducerState} dispatch={dispatch} kitaplar={kitaplar} />
       </div>
       </div>
       <Footer />

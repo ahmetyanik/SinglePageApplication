@@ -1,47 +1,39 @@
-import React, { useEffect, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import Footer from '../Footer'
-import Navbar from '../Navbar'
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import Footer from "../Footer";
+import Navbar from "../Navbar";
 
 function Aramasayfasi() {
+  const query = new URLSearchParams(useLocation().search);
 
-   const query = new URLSearchParams(useLocation().search);
+  const arananKelime = query.get("kitap");
 
-   const arananKelime = query.get("kitap");
+  const [kitaplar, setKitaplar] = useState([]);
 
-   const [kitaplar, setKitaplar] = useState([{},{},{},{},{},{},{},{},{}]);
-  
-   async function kitaplariAl() {
-     const kitaplarJSON = await fetch("/kitaplar.json");
-     const kitaplarArray = await kitaplarJSON.json();
+  async function kitaplariAl() {
+    const kitaplarJSON = await fetch("/kitaplar.json");
+    const kitaplarArray = await kitaplarJSON.json();
 
-     const newArray =   kitaplarArray.filter(kitap=>{
+    const newArray = kitaplarArray.filter((kitap) => {
+      return kitap.kitapismi.includes(arananKelime);
+    });
 
-        return kitap.kitapismi.includes(arananKelime);
-     })
+    setKitaplar(newArray);
+  }
 
-    
-   
-     setKitaplar(newArray);
-   }
-   
-   useEffect(() => kitaplariAl(), []);
+  useEffect(() => kitaplariAl(), []);
 
-   console.log(kitaplar);
+  console.log(kitaplar);
 
+  return (
+    <div>
+      <Navbar />
 
+      <div className="d-flex justify-content-center">
 
-    return (
-        <div>
-            <Navbar/>
-
-            <div className='d-flex justify-content-center'>
-            
-        {
-            kitaplar.map((kitap,index)=>{
-
-                return (
-                    <div
+        {kitaplar.map((kitap, index) => {
+          return (
+            <div
               key={index}
               className="card m-1"
               style={{ width: "18rem", height: "30rem" }}
@@ -56,19 +48,17 @@ function Aramasayfasi() {
                 <h5 className="card-title">{kitap.kitapismi}</h5>
                 <p className="card-text">{kitap.yayinevi}</p>
                 <Link to={`/book/${kitap.kitapismi}`}>
-                  
                   <button className="btn btn-primary">{kitap.kitapismi}</button>
                 </Link>
               </div>
             </div>
-                )
-            })
-        }
-        </div>
+          );
+        })}
+      </div>
 
-            <Footer/>
-        </div>
-    )
+      <Footer />
+    </div>
+  );
 }
 
-export default Aramasayfasi
+export default Aramasayfasi;

@@ -34,7 +34,6 @@ function Navbar() {
 
   useEffect(() => kitaplariAl(), []);
 
-  console.log(kategoriler);
 
   return (
     <div>
