@@ -1,21 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import Cart from "./Cart"
 import { useParams } from "react-router-dom";
 
-function Kitap() {
+function Kitap({ reducerState, dispatch }) {
   const params = useParams();
-  const [kitaplar, setKitaplar] = useState([
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-    {},
-  ]);
+  const [kitaplar, setKitaplar] = useState([]);
 
   async function kitaplariAl() {
     const kitaplarJSON = await fetch("/kitaplar.json");
@@ -33,7 +24,9 @@ function Kitap() {
   return (
     <div>
       <Navbar />
-      <div className="mt-3" style={{ minHeight: "50vh" }}>
+      <div className="row">
+      <div className="mt-3 col-9" style={{ minHeight: "50vh" }}>
+
         <div className="row">
           {kitaplar.map((kitap, index) => {
             return kitap.kitapismi === params.book ? (
@@ -75,6 +68,11 @@ function Kitap() {
 
           </div>
         </div>
+        
+      </div>
+      <div className="col-3 d-flex justify-content-end">
+      <Cart reducerState={reducerState} dispatch={dispatch} />
+      </div>
       </div>
       <Footer />
     </div>
