@@ -2,17 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Cart({ reducerState, dispatch, kitaplar }) {
-  console.log(kitaplar);
+  console.log(reducerState);
+  const array = [];
 
-  const newObject = reducerState.reduce(function (pre, cur) {
-    if (!pre[cur.kitapismi]) {
-      pre[cur.kitapismi] = 1;
-    } else {
-      pre[cur.kitapismi]++;
-    }
-
-    return pre;
-  }, {});
+  console.log(reducerState)
 
   function genelToplam() {
     let toplam = 0;
@@ -29,29 +22,44 @@ function Cart({ reducerState, dispatch, kitaplar }) {
       <div className="card" style={{ width: "18rem" }}>
       <Link to="/cartpage"> <div className="card-header">CART</div></Link> 
         <ul className="list-group list-group-flush">
-          {Object.keys(newObject).map((kitap, index) => {
+          {reducerState.map((kitap, index) => {            
+
+
+            if (!array.includes(kitap.kitapismi)) {
+                kitap.tiklama=1;
+                  array.push(kitap.kitapismi);
             return (
               <li
                 key={index}
                 className="list-group-item d-flex justify-content-lg-between"
               >
                 <span>
-                  <Link to={`/book/${kitap}`}>
-                    <span>{kitap}</span>
+                  <Link to={`/book/${kitap.kitapismi}`}>
+                    <span>{kitap.kitapismi}</span>
                   </Link>
                   <span className="badge bg-info text-dark fs-6 mx-1">
-                    {newObject[kitap]}
+                    {
+                      reducerState.map(element=>{
+
+                        if(kitap.kitapismi===element.kitapismi){
+
+                        console.log("kitap:" , kitap,kitap.tiklama)
+                        }
+
+                      }) 
+                    }
                   </span>
                 </span>
                 <span className="d-flex">
                   <i
                     onClick={() => {
                       const secilenKitap = kitaplar.filter((stateKitap) => {
-                        return stateKitap.kitapismi === kitap;
-                      });
+                        return stateKitap.kitapismi === kitap.kitapismi;
+                      });                     
+
 
                       dispatch({
-                        type: "plusFromCart",
+                        type: "add",
                         payload: { kitap: secilenKitap },
                       });
                     }}
@@ -59,6 +67,8 @@ function Cart({ reducerState, dispatch, kitaplar }) {
                   />
                   <i
                     onClick={() => {
+
+                      
                       const secilenKitap = kitaplar.filter((stateKitap) => {
                         return stateKitap.kitapismi === kitap;
                       });
@@ -73,7 +83,11 @@ function Cart({ reducerState, dispatch, kitaplar }) {
                 </span>
               </li>
             );
+            }else{
+              kitap.tiklama++;
+            }
           })}
+
 
           <li style={{ listStyle: "none" }}>Genel Toplam:{genelToplam()}</li>
         </ul>

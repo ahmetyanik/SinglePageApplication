@@ -15,7 +15,9 @@ import Cartpage from "./components/assets/Cartpage";
 function reducer(state,action){
 
 
-  if(action.type==="add"){
+  if(action.type==="add"){   
+
+    console.log(action.payload)
 
     alertify.success(action.payload.kitap.kitapismi + " eklendi.",1);
     return [...state,action.payload.kitap]
@@ -23,6 +25,7 @@ function reducer(state,action){
   
   if(action.type==="plusFromCart"){
 
+    
 
     alertify.success(action.payload.kitap[0].kitapismi + " eklendi.",1);
     return [...state,action.payload.kitap[0]]
