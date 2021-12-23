@@ -2,15 +2,24 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Cart({ reducerState, dispatch, kitaplar }) {
-  console.log(reducerState);
-  const array = [];
 
-  console.log(reducerState)
+  console.log(kitaplar);
+  
+  const newObject = reducerState.reduce(function (pre, cur) {
+    if (!pre[cur.kitapismi]) {
+      pre[cur.kitapismi] = 1;
+    } else {
+      pre[cur.kitapismi]++;
+    }
+
+    return pre;
+  }, {});
 
   function genelToplam() {
     let toplam = 0;
 
     reducerState.forEach((element) => {
+
       toplam += element.fiyat;
     });
 
@@ -20,76 +29,53 @@ function Cart({ reducerState, dispatch, kitaplar }) {
   return (
     <div>
       <div className="card" style={{ width: "18rem" }}>
-      <Link to="/cartpage"> <div className="card-header">CART</div></Link> 
+        <div className="card-header">CART</div>
         <ul className="list-group list-group-flush">
-          {reducerState.map((kitap, index) => {            
-
-
-            if (!array.includes(kitap.kitapismi)) {
-                kitap.tiklama=1;
-                  array.push(kitap.kitapismi);
+          {Object.keys(newObject).map((kitap, index) => {
             return (
-              <li
-                key={index}
-                className="list-group-item d-flex justify-content-lg-between"
-              >
-                <span>
-                  <Link to={`/book/${kitap.kitapismi}`}>
-                    <span>{kitap.kitapismi}</span>
-                  </Link>
-                  <span className="badge bg-info text-dark fs-6 mx-1">
-                    {
-                      reducerState.map(element=>{
-
-                        if(kitap.kitapismi===element.kitapismi){
-
-                        console.log("kitap:" , kitap,kitap.tiklama)
-                        }
-
-                      }) 
-                    }
-                  </span>
+              <li key={index} className="list-group-item d-flex justify-content-lg-between">
+              <span>
+                <Link to={`/book/${kitap}`}>
+                  <span>{kitap}</span>
+                </Link>
+                <span className="badge bg-info text-dark fs-6 mx-1">
+                  {newObject[kitap]}
+                </span>
                 </span>
                 <span className="d-flex">
-                  <i
-                    onClick={() => {
-                      const secilenKitap = kitaplar.filter((stateKitap) => {
-                        return stateKitap.kitapismi === kitap.kitapismi;
-                      });                     
+                <i onClick={()=>{
+                  
+                  const secilenKitap = kitaplar.filter(stateKitap=>{
+
+                    return stateKitap.kitapismi === kitap;
+                  }) 
 
 
-                      dispatch({
-                        type: "add",
-                        payload: { kitap: secilenKitap },
-                      });
-                    }}
-                    className="fas fa-plus mx-4"
-                  />
-                  <i
-                    onClick={() => {
 
-                      
-                      const secilenKitap = kitaplar.filter((stateKitap) => {
-                        return stateKitap.kitapismi === kitap;
-                      });
 
-                      dispatch({
-                        type: "minusFromCart",
-                        payload: { kitap: secilenKitap, index: index },
-                      });
-                    }}
-                    className="fas fa-minus"
-                  ></i>
+                  dispatch({type:"plusFromCart", payload:{kitap:secilenKitap}})
+                  
+                  }} className="fas fa-plus mx-4"/>
+                <i onClick={()=>{
+
+                  
+                  
+                  const secilenKitap = kitaplar.filter(stateKitap=>{
+
+                    return stateKitap.kitapismi === kitap;
+                  }) 
+
+
+
+                  dispatch({type:"minusFromCart", payload:{kitap:secilenKitap,index:index}})
+                  
+                  }} className="fas fa-minus"></i>
                 </span>
               </li>
             );
-            }else{
-              kitap.tiklama++;
-            }
           })}
 
-
-          <li style={{ listStyle: "none" }}>Genel Toplam:{genelToplam()}</li>
+          <li style={{listStyle:"none"}} >Genel Toplam:{genelToplam()}</li>
         </ul>
       </div>
     </div>

@@ -9,7 +9,17 @@ function Kategori({ reducerState, dispatch }) {
 
   console.log(params);
 
-  const [kitaplar, setKitaplar] = useState([]);
+  const [kitaplar, setKitaplar] = useState([
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+  ]);
 
   async function kitaplariAl() {
     const kitaplarJSON = await fetch("/kitaplar.json");

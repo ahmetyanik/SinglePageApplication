@@ -2,7 +2,17 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  const [kitaplar, setKitaplar] = useState([]);
+  const [kitaplar, setKitaplar] = useState([
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+  ]);
   const [kategoriler, setKategoriler] = useState([]);
 
   async function kitaplariAl() {
@@ -23,6 +33,7 @@ function Navbar() {
   }
 
   useEffect(() => kitaplariAl(), []);
+
 
   return (
     <div>
@@ -70,13 +81,12 @@ function Navbar() {
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                   {kategoriler.map((tür, index) => {
                     return (
-                      <Link key={index} to={`/kategori/${tür}`}>
-                        <li>
-                          <div className="dropdown-item" href="#">
-                            {tür}
-                          </div>
-                        </li>
-                      </Link>
+                     <Link key={index} to={`/kategori/${tür}`} >
+                     <li >
+                        <div className="dropdown-item" href="#">
+                          {tür}
+                        </div>
+                      </li></Link> 
                     );
                   })}
                 </ul>
@@ -85,11 +95,7 @@ function Navbar() {
                 <a className="nav-link disabled">Disabled</a>
               </li>
             </ul>
-            <form
-              action="/arama"
-              id="aranan"
-              className="d-flex"
-            >
+            <form action="/arama" id="aranan" className="d-flex">
               <input
                 name="kitap"
                 className="form-control me-2"

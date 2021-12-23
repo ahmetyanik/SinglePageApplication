@@ -7,7 +7,6 @@ import Aramasayfasi from "./components/assets/Aramasayfasi";
 import Kategori from "./components/assets/Kategori";
 import { useReducer } from "react";
 import alertify from "alertifyjs"
-import Cartpage from "./components/assets/Cartpage";
 
 
 
@@ -80,9 +79,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Mainpage reducerState = {state} dispatch={dispatch} />}/>
         <Route path="/book/:book" element={<Kitap reducerState = {state} dispatch={dispatch} />} />
-        <Route path="/arama" element={<Aramasayfasi reducerState = {state} dispatch={dispatch}  />} />
+        <Route path="/arama" element={<Aramasayfasi />} />
         <Route path="/kategori/:tur" element={<Kategori reducerState = {state} dispatch={dispatch} />} />
-        <Route path="/cartpage" element={<Cartpage reducerState = {state} dispatch={dispatch} />} />
       </Routes>
 
     </div>

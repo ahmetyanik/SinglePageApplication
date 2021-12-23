@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Footer from "../Footer";
 import Navbar from "../Navbar";
-import Cart from "./Cart";
 
-function Aramasayfasi({reducerState,dispatch}) {
+function Aramasayfasi() {
   const query = new URLSearchParams(useLocation().search);
 
   const arananKelime = query.get("kitap");
@@ -29,8 +28,8 @@ function Aramasayfasi({reducerState,dispatch}) {
   return (
     <div>
       <Navbar />
-    <div className="row">
-      <div className="col-10 d-flex flex-wrap justify-content-center">
+
+      <div className="d-flex justify-content-center">
 
         {kitaplar.map((kitap, index) => {
           return (
@@ -55,14 +54,6 @@ function Aramasayfasi({reducerState,dispatch}) {
             </div>
           );
         })}
-      </div>
-        <div className="col-2">
-        <Cart
-            reducerState={reducerState}
-            dispatch={dispatch}
-            kitaplar={kitaplar}
-          />
-      </div>
       </div>
 
       <Footer />
