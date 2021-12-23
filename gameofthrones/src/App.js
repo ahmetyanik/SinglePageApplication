@@ -6,7 +6,7 @@ import Book from './components/Book';
 
 function App() {
 
-  const [state, setState] = useState([])
+  const [books, setBooks] = useState([])
   const [images,setImages] = useState([]);
 
   async function getData(){
@@ -19,7 +19,7 @@ function App() {
 
 
     setImages(images)
-    setState(kitaplar);
+    setBooks(kitaplar);
   }
   
   useEffect(()=>getData(),[])
@@ -31,8 +31,8 @@ function App() {
     <div className="App">
 
     <Routes>
-    <Route exact path="/" element={<Mainpage state={state} images={images}/>}/>
-    <Route path="/book/:bookname" element={<Book/>}/>
+    <Route exact path="/" element={<Mainpage state={books} images={images}/>}/>
+    <Route path="/book/:bookname" element={<Book state={books} images={images}/>}/>
 
     
 

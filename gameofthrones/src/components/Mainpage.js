@@ -15,7 +15,7 @@ function Mainpage({ state, images }) {
             state.map((book,index)=>{
 
                 return(
-                <Link to={`/book/${book.name}`}> <Card book={book} image={images[index]}/> </Link> 
+                <Link key={index} to={`/book/${book.name}`}> <Card book={book} image={images[index]}/> </Link> 
                 )
             })
         }

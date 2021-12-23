@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 function Card({ book,image }) {
 
@@ -22,14 +21,14 @@ function Card({ book,image }) {
               </div>
             </div>
             <div className="text-gray-400 font-medium text-sm rounded-md cursor-pointer mb-10 flex justify-center">
-              <img className="rounded" src={image.img} />
+              <img style={{height:"200px"}} className="rounded" src={image.img} />
             </div>
             <div className="flex justify-center mb-4">
               <span
-                class="tracking-wider text-white bg-yellow-700 px-4 py-1 text-sm rounded leading-loose mx-2 font-semibold"
+                className="tracking-wider text-white bg-yellow-700 px-4 py-1 text-sm rounded leading-loose mx-2 font-semibold"
                 title=""
               >
-                <i class="fas fa-heart" aria-hidden="true"></i> Number of Pages: {book.numberOfPages}
+                <i className="fas fa-heart" aria-hidden="true"></i> Number of Pages: {book.numberOfPages}
               </span>
     
             </div>
