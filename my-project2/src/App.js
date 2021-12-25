@@ -2,25 +2,33 @@ import "./App.css";
 
 function App() {
   return (
-    <div class="flex justify-center mt-2">
-      <div
-        style={{ height: "500px" }}
-        className="border box-border  shadow-md shadow-teal-700 "
-      >
-        <img
-          className="object-cover w-96 h-96"
-          src="https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1024&h=1280&q=80"
-        />
+    <div
+      style={{ height: "100vh" }}
+      className="flex justify-center items-center p-2"
+    >
+      <div className="border shadow-xl mt-3 rounded">
+        <h1 className=" text-center rounded-t bg-black text-white p-2">Deneme Sayfasi</h1>
+        <div className="md:columns-2 lg:columns-3">
+          <img
+            className=""
+            src="https://th.bing.com/th/id/R.fe69cff1eea942f1972d5d50ba89c987?rik=bEqPU8Jr%2br7WKg&pid=ImgRaw&r=0"
+            alt=""
+          />
 
-        <div className="text-center">
-          <label className="animate-bounce w-6 h-6">Isim:</label>
-          <span>Ahmet</span>
+          <div className="sm:m-2 flex items-center flex-col">
+            <p className=" text-justify">
+              1Aslan, mit den Varianten Arslan und Arsalan, ist ein türkischer
+              männlicher Vorname[1] und Familienname mit der Bedeutung „der
+              Löwe“, der mit derselben Bedeutung auch im Mongolischen auftritt.
+            </p>
+            <p className=" text-justify mt-2">
+              2Aslan, mit den Varianten Arslan und Arsalan, ist ein türkischer
+              männlicher Vorname[1] und Familienname mit der Bedeutung „der
+              Löwe“, der mit derselben Bedeutung auch im Mongolischen auftritt.
+            </p>
+          </div>
         </div>
       </div>
-
-      <textarea class="caret-indigo-500"></textarea>
-
-     
     </div>
   );
 }
