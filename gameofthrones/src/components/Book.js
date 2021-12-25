@@ -5,7 +5,6 @@ import Navbar from "./Navbar";
 function Book({ state,images }) {
   const params = useParams();
 
-  console.log(images);
 
   return (
     <div>
@@ -14,7 +13,7 @@ function Book({ state,images }) {
       {state.map((book, index) => {
         if (params.bookname === book.name)
           return (
-              <div className="row">
+              <div key={index} className="row">
             <div className="card grid  flex max-w-sm w-80 bg-white shadow-md rounded-lg overflow-hidden mx-auto ">
               <div className="flex items-center w-full px-2 py-3">
                 <div className="mx-3 w-full">
