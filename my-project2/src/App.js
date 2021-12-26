@@ -2,32 +2,51 @@ import "./App.css";
 
 function App() {
   return (
-    <div
-      style={{ height: "100vh" }}
-      className="flex justify-center items-center p-2"
-    >
-      <div className="border shadow-xl mt-3 rounded">
-        <h1 className=" text-center rounded-t bg-black text-white p-2">Deneme Sayfasi</h1>
-        <div className="md:columns-2 lg:columns-3">
-          <img
-            className=""
-            src="https://th.bing.com/th/id/R.fe69cff1eea942f1972d5d50ba89c987?rik=bEqPU8Jr%2br7WKg&pid=ImgRaw&r=0"
-            alt=""
-          />
+    <div className="p-3 bg-[#1e293b]">
+      <div className="sm:columns-2 flex justify-between">
+        <img
+          className="mb-3 rounded-lg sm:w-6/12 sm:h-52"
+          src="https://tailwindcss.com/_next/static/media/beach-house.02381ba1b6293047997200a3099d03cb.jpg"
+          alt=""
+        />
+        <img
+          className="mb-3 rounded-lg hidden sm:block sm:w-6/12 sm:h-52"
+          src="https://tailwindcss.com/_next/static/media/beach-house-interior-1.bc69273a536a51bb58092b2896b92e3a.jpg"
+          alt=""
+        />
+      </div>
+      <div className="text-white text-xs mb-3 sm:hidden">
+        <span>4.89(128) .</span> <span>Collingwood, Ontario </span>
+      </div>
 
-          <div className="sm:m-2 flex items-center flex-col">
-            <p className=" text-justify">
-              1Aslan, mit den Varianten Arslan und Arsalan, ist ein türkischer
-              männlicher Vorname[1] und Familienname mit der Bedeutung „der
-              Löwe“, der mit derselben Bedeutung auch im Mongolischen auftritt.
-            </p>
-            <p className=" text-justify mt-2">
-              2Aslan, mit den Varianten Arslan und Arsalan, ist ein türkischer
-              männlicher Vorname[1] und Familienname mit der Bedeutung „der
-              Löwe“, der mit derselben Bedeutung auch im Mongolischen auftritt.
-            </p>
+      <div className="flex sm:justify-between sm:columns-2 sm:items-center">
+        <div className="hidden sm:block">
+          <div className="text-white text-xs mb-3 sm:block mb-2">
+            <div className="text-gray-400 text-sm font-semibold mb-2">
+              Entire House
+            </div>
+            <div className="text-white text-lg font-bold mb-2">
+              Beach House in Collingwood
+            </div>
+          </div>
+          <div className="text-white">
+            <span>4.89(128) .</span> <span>Collingwood, Ontario </span>
           </div>
         </div>
+
+        <button className="rounded-md bg-indigo-700 p-2 text-sm text-white mb-3 sm:h-10">
+          Check availability
+        </button>
+      </div>
+
+      <div>
+        <p className="text-justify text-gray-400 text-sm sm:mt-3">
+          This sunny and spacious room is for those traveling light and looking
+          for a comfy and cosy place to lay their head for a night or two. This
+          beach house sits in a vibrant neighborhood littered with cafes, pubs,
+          restaurants and supermarkets and is close to all the major attractions
+          such as Edinburgh Castle and Arthur's Seat.
+        </p>
       </div>
     </div>
   );
