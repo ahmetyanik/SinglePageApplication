@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Country from "./components/Country";
+import Countrypage from "./components/Countrypage";
 import Mainpage from "./components/Mainpage";
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Mainpage countries={countries} />} />
-        <Route path="/country/:countryname" element={<Country />} />
+        <Route path="/country/:countryname" element={<Countrypage />} />
       </Routes>
     </BrowserRouter>
   );

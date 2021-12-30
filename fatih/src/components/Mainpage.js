@@ -7,7 +7,7 @@ function Mainpage({ countries }) {
 
   return (
     <div>
-      <Navbar />
+      <Navbar   />
       <div className="d-flex justify-content-center align-items-center flex-wrap">
         {countries.map((country, index) => {
           return <Country key={index} country={country}  />;

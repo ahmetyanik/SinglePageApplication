@@ -9,7 +9,7 @@ function Country({ country }) {
         <div class="card-body">
           <h5 class="card-title">{country.capital}</h5>
           <p class="card-text">{country.continents[0]}</p>
-          <Link to={country.name.common}>
+          <Link to={`/country/${country.name.common}`}>
             <a href="#" class="btn btn-primary">
               {country.name.common}
             </a>
