@@ -23,40 +23,7 @@ module.exports = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
     },    
-    colors: {
-      transparent: 'transparent',
-      current: 'currentColor',
-      'white': '#ffffff',
-      'purple': '#3f3cbb',
-      'midnight': '#121063',
-      'metal': '#565584',
-      'tahiti': '#3ab7bf',
-      'silver': '#evebff',
-      'bubble-gum': '#ff77e9',
-      'bermuda': '#78dcca',
-      "primary" : '#5c6ac4',
-      current: 'currentColor',
-      black: colors.black,
-      white: colors.white,
-      gray: colors.gray,
-      emerald: colors.emerald,
-      indigo: colors.indigo,
-      yellow: colors.yellow,
-      brown: {
-        50: '#fdf8f6',
-        100: '#f2e8e5',
-        200: '#eaddd7',
-        300: '#e0cec7',
-        400: '#d2bab0',
-        500: '#bfa094',
-        600: '#a18072',
-        700: '#977669',
-        800: '#846358',
-        900: '#43302b',
-      },
-      
-    },
-  },
+     },
   plugins: [
     
     plugin(function({ addUtilities, addComponents, e, prefix, config }) {
