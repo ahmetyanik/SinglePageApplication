@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 function Vergleichungfunc() {
   const [count, setCount] = useState(0);
 
+  
+
   useEffect(() => {
     const bett2 = document.querySelector("#bett2");
     bett2.innerText = count;
